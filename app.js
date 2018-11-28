@@ -47,7 +47,7 @@ app.post('/pay', (req, res) => {
             throw error;
         } 
         else {
-            // console.log(payment);
+            console.log(payment);
             for (let i = 0; i < payment.links.length; i++){
                 if (payment.links[i].rel === 'approval_url'){
                     res.redirect(payment.links[i].href);
